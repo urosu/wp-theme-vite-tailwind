@@ -12,8 +12,8 @@
 //import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 import liveReload from 'vite-plugin-live-reload'
-const { resolve } = require('path')
-const fs = require('fs')
+import { resolve } from 'path'
+import fs from 'fs'
 
 
 // https://vitejs.dev/config
@@ -21,7 +21,7 @@ export default defineConfig({
 
   plugins: [
     //vue(),
-    liveReload(__dirname+'/**/*.php')
+    liveReload(__dirname + '/**/*.php')
   ],
 
   // config
@@ -44,9 +44,9 @@ export default defineConfig({
     // our entry
     rollupOptions: {
       input: {
-        main: resolve( __dirname + '/main.js')
+        main: resolve(__dirname + '/main.js')
       },
-      
+
       /*
       output: {
           entryFileNames: `[name].js`,
@@ -90,7 +90,7 @@ export default defineConfig({
       host: 'localhost',
       //port: 443
     },
-    
+
   },
 
   // required for in-browser template compilation
@@ -101,4 +101,3 @@ export default defineConfig({
     }
   }
 })
-
